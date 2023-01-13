@@ -5,6 +5,7 @@ Esta es mi resolución para el proyecto final del curso "Primeros pasos del desa
 
 Para llevar a cabo el mismo aplique los conocimientos adquiridos de HTML, Css y Javascript con el fin de poder maquetar, diseñar y darle funcionalidad al sitio web creado.
 
+Para acceder al sitio web, ingresar al siguiente [enlace](https://nachob14.github.io/proyectofinal-ticmas-CV/)
 ### URLs DE INSPIRACION
 
 Datos personales generados con el sitio indicado en el curso: https://randomuser.me/
