@@ -11,3 +11,5 @@ Para acceder al sitio web, ingresar al siguiente [enlace](https://nachob14.githu
 Datos personales generados con el sitio indicado en el curso: https://randomuser.me/
 
 Datos academicos y laborales: https://cdn-images.zety.es/pages/curriculum_programador_zety_es_3.jpg
+
+Para generar las regular expressions utilizadas en la validación del formulario de contacto, utilice el siguiente sitio web: https://regexr.com/
