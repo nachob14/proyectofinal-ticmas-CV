@@ -285,35 +285,6 @@ function validarFormulario(){
         mensajeError.classList.add('visually-hidden');
     }
 
-    /*if(resultadoNombre == false)
-    {
-      let nombreError = document.getElementById('nombreError');
-      nombreError.classList.remove('visually-hidden')
-      return false; 
-    } else {
-      let nombreExitoso = document.getElementById('nombreError');  
-      nombreExitoso.classList.add('visually-hidden')  
-    }
-  
-    if (resultadoEmail == false)
-    {
-      let emailError = document.getElementById('emailError');
-      emailError.classList.remove('visually-hidden');
-      return false;
-    } else {
-      let emailExitoso = document.getElementById('emailError');
-      emailExitoso.classList.remove('visually-hidden');
-    }
-
-    if (mensajeFormulario == '') {
-      let mensajeError = document.getElementById('mensajeError');
-      mensajeError.classList.remove('visually-hidden');
-      return false;
-    } else {
-      let mensajeExitoso = document.getElementById('mensajeError');
-      mensajeExitoso.classList.remove('visually-hidden');
-    }
-    */
     return true;
   }
 
