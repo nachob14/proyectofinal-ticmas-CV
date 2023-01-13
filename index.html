@@ -5,46 +5,247 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='/node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/proyectofinal-ticmas-CV/node_modules/bootstrap/dist/css/bootstrap.min.css'>
 </head>
 
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid col-2">
-            <a class="navbar-brand" href="#">Curriculum Vitae</a>
+        <div class="container-fluid col-8">
+            <a class="navbar-brand" href="#" onclick="iniciar()">
+                <img src="/proyectofinal-ticmas-CV/src/img/icono colores invertidos.png" alt="Icono de curriculum vitae" style="height: 50px; width: 50px;" />
+                Curriculum Vitae</a>
         </div>
             
         <div class="navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Informacion personal</a>
+                    <a class="nav-link" href="#" id="linkInformacion" onclick="mostrarInformacion()">Informacion personal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Experiencia</a>
+                    <a class="nav-link" href="#" id="linkExperiencia" onclick="mostrarExperiencia()">Experiencia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Habilidades</a>
+                    <a class="nav-link" href="#" id="linkHabilidades" onclick="mostrarHabilidades()">Educacion y habilidades</a>
                 </li>
             </ul>
                 
         </div>
     </nav>
 
-    <!-- informacion personal -->
-    <div>
-        Aca va la informacion personal
-    </div>
-    <!-- Experiencia -->
-    <div>
-        Aca va la experiencia laboral
-    </div>
-    <!-- Habilidades -->
-    <div>
-        Aca van las habilidades
+    <!-- Portada -->
+    <div class="container-fluid" id="portada">
+        <div class="row">
+            <div class="container col-5" style="padding:40px">
+                <br>
+                <div class="row align-self-center justify-content-center">
+                    <img class='align-self-center' id="imagenPortada" src="" style="border-radius: 45%; height: 200px; width: 200px;"/>
+                    <h1 class='align-self-center justify-content-center text-center' id="tituloPortada">TITULO PORTADA</h1>
+                </div>
+                <div class='row align-self-center justify-content-center' >
+                    <img src="/proyectofinal-ticmas-CV/src/img/lineadivisoria.png" style="height: 20px; width: 250px;" />
+                    <p class='text-center' id="textoPortada"></p>
+                </div>
+            </div>
+            <div class="container col-7 text-start" style="padding: 30px">
+                <h1>Hola, soy Dan.</h1>
+                <h4>Diseño y construyo sitios web.</h4>
+                <br>
+                <button type="button" class="btn btn-primary" id="botonConocer">Conoce sobre mi</button>
+                <button type="button" class="btn btn-dark" id="botonContacto">Contacto</button>
+                <br><br>
+                <p>
+                    Programador con mas de cinco años de experiencia generando codigo para empresas del sector bancario. 
+                </p>
+                <p>
+                    Cree el nuevo portal web de Santander, el cual recibe mas de 1 millon de visitas al dia. 
+                    Los errores reportados en los micrositios del banco se reujeron en un 20% y la retencion de usuarios incremento en un 10%. 
+                </p>
+                <p>
+                    Especialista en solucion de problemas y trabajo en equipo.
+                </p>
+            </div>
+            
+        </div>
     </div>
 
-<script src="/src/index.js"></script>
+    <!-- informacion personal -->
+    <div class="container visually-hidden" id="contenedorInformacionPersonal">
+        <div class="row">
+            <div class="col">
+                <br>
+                <img src="" alt='retrato de persona' id="imagenInformacion" style="border-radius:40%"/>
+                <h2 id="nombrePersona"></h2>
+                <h6 id="profesionPersona"></h6>
+            </div>
+            <div class="col" style="padding-top: 50px">
+                <a href="mailto:danrodriguez@example.com" class="d-flex align-items-start">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2258/2258570.png" alt="icono de un email" style="height:20px; width:20px"/>
+                    <p id="emailPersona" style="padding-left:10px"></p>
+                </a>
+                <a href="#" class="d-flex align-items-start" style="text-decoration: none; color: inherit;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2195/2195322.png" alt="icono de un calendario" style="height:20px; width:20px"/>
+                    <p id="fechaPersona" style="padding-left:10px"></p>
+                </a>
+                <a href="#" class="d-flex align-items-start" style="text-decoration: none; color: inherit;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/447/447031.png" alt="icono de localizacion" style="height:20px; width:20px"/>
+                    <p id="direccionPersona" style="padding-left:10px"></p>
+                </a>
+                <a href="tel:(472) 917-0337" class="d-flex align-items-start">
+                    <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="icono de un telefono" style="height:20px; width:20px"/>
+                    <p id="telefonoPersona" style="padding-left:10px"></p>
+                </a>
+            </div>
+            <div class="col">
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiencia -->
+    <div class="container-fluid visually-hidden" id="contenedorExperiencia">
+        <div class="row">
+            <div class="col">
+                <br>
+                <h2 class="text-center">Experiencias laborales anteriores</h2>
+                <div class="card position-relative top-0 start-50 translate-middle-x" style="width:50rem">
+                    <div class="card-body">
+                      <h5 class="card-title">Programador Web - Banco Santander (2017 - Actualidad)</h5>
+                      <p class="card-text"> Escribi el codigo de una pagina web con la capacidad de recibir a mas de un millon de usuarios diariamente. 
+                                            Responsable de crear un comparador de tarjetas de credito que elevo las ventas de producto en un 15%. 
+                                            Desarrolle una aplicacion bancaria especializada en seguros de auto la cual recibio una calificacion de 4.8 estrellas.
+                      </p>
+                    </div>
+                </div>
+                <br>
+                <div class="card position-relative top-0 start-50 translate-middle-x" style="width:50rem">
+                    <div class="card-body">
+                      <h5 class="card-title">Programador Web - Flame Analytics (2016 - 2017)</h5>
+                      <p class="card-text">
+                        Participe en mas de 15 proyectos digitales y colabore con un equipo de diseñadores, copywriters creativos, project managers y Q&A testers. 
+                        Reduje el porcentaje de errores mensuales de la pagina de inicio del portal de la compañia en un 10%. 
+                        Como parte del comite de mejoras continuas de la empresa, colabore para optimizar los tiempos de carga de la pagina web en un 15%.
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Habilidades -->
+    <div class="container-fluid visually-hidden" id="contenedorHabilidades">
+        <div class="row">
+            <div class="col">
+                <br>
+                <h2 class="text-center">Educacion</h2>
+                <div class="card position-relative top-0 start-50 translate-middle-x" style="width:50rem">
+                    <div class="card-body">
+                      <h4 class="card-title">Ingenieria tecnica en Informatica de Sistemas (2012 - 2015)</h4>
+                      <h5>Universidad Complutense de Madrid.</h5>
+                      <br>
+                      <p> 
+                        Tercer lugar en el Hackaton CodeFest 2014. 
+                      </p>
+                      <p>
+                        Creador del blog www.codigoinfinito.com, especializado en consejos de programacion y seguridad web. 
+                      </p>
+                      <p>
+                        Ganador de la beca de Excelencia Academica 2012.
+                      </p>                 
+                    </div>
+                </div>
+                <br>
+                <h2 class="text-center">Habilidades</h2>
+                <div class="card position-relative top-0 start-50 translate-middle-x" style="width:50rem">
+                    <div class="card-body">
+                      <h4 class="card-title">Habilidades informaticas</h4>
+                      <ul>
+                        <li class="align-items-start">
+                            <b>HTML5</b> - Excelente
+                        </li>
+                        <li>
+                            <b>CSS3</b> - Excelente
+                        </li>
+                        <li>
+                            <b>JavaScript</b> - Excelente
+                        </li>
+                        <li>
+                            <b>PHP</b> - Excelente
+                        </li>
+                        </div>
+                      </ul> 
+                </div>
+                <br>
+                <div class="card position-relative top-0 start-50 translate-middle-x" style="width:50rem">
+                    <div class="card-body">
+                      <h4 class="card-title">Idiomas</h4>
+                      <ul>
+                        <li class="align-items-start">
+                            <b>Español</b> - Nativo
+                        </li>
+                        <li>
+                            <b>Ingles</b> - Avanzado
+                        </li>
+                        <li>
+                            <b>Italiano</b> - Basico
+                        </li>
+                      </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <form class='container visually-hidden' id="formularioContacto">
+        <br>
+        <div class="mb-3">
+            <label for="nombreFormularioContacto" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombreFormularioContacto" placeholder="Juan">
+        </div>
+        <div class="text-danger fst-italic visually-hidden" id="nombreError">
+            <p>Por favor, ingresa un nombre valido.</p>
+        </div>
+        <div class="mb-3">
+            <label for="emailFormularioContacto" class="form-label">Correo electronico</label>
+            <input type="email" class="form-control" id="emailFormularioContacto" placeholder="abcdefg@ejemplo.com">
+        </div>
+        <div class="text-danger fst-italic visually-hidden" id="emailError">
+            <p>Por favor, ingresa un email valido.</p>
+        </div>
+        <div class="mb-3">
+            <label for="mensajeFormularioContacto" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensajeFormularioContacto" rows="4"></textarea>
+        </div>
+        <div class="text-danger fst-italic visually-hidden" id="mensajeError">
+            <p>Por favor, ingresa un mensaje valido.</p>
+        </div>
+        <button class="btn btn-dark" type="submit" id="botonFormularioContacto">Enviar</button>
+    </form>
+    <br>
+    <!-- Texto al enviar el mensaje -->
+    <h4 class='text-center visually-hidden' id="mensajeExitoso">Tu mensaje ha sido enviado exitosamente</h4>
+
+    <!-- Footer -->
+    <footer class="align-self-center justify-content-center text-center">
+        <div class="container" id="Redes">
+            <h6>Redes</h6>
+            <a id="iconoFacebook" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/4494/4494464.png" alt="icono de facebook" style="height:40px; width:40px"/>
+            </a>
+            <a id="iconoLinkedIn" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/4494/4494471.png" alt="icono de LinkedIn" style="height:40px; width:40px"/>
+            </a>
+            <a id="iconoGitHub" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="icono de GitHub" style="height:40px; width:40px"/>
+            </a>
+        </div>
+        <br>
+        <p>Toda la informacion que comprende datos personales, imagen e informacion laboral y academica aqui presente es ficticia. Cualquier similitud con la realidad es pura coincidencia</p>
+    </footer>
+
+    <script src="/proyectofinal-ticmas-CV/src/index.js"></script>
 </body>
 
 </html>
